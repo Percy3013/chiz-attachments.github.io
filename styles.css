@@ -172,7 +172,7 @@ ul li:hover .dropdown {
         transition: 1s;
     }
     .header.active {
-        height: 320px;
+        height: 380px;
     }
     .navbar {
         position: fixed;
@@ -254,15 +254,15 @@ ul li:hover .dropdown {
     }
     
     ul li:hover .dropdown {
-        left: 100%;
+        left: 80%;
     }
     
     ul li:hover .dropdown li:nth-child(2) {
-        left: 100%;
+        left: 70%;
     }
     
     ul li:hover .dropdown li:nth-child(3) {
-        left: 200%;
+        left: 145%;
     }
     
     .hud:hover {
