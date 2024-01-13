@@ -30,10 +30,9 @@ body.lb-disable-scrolling {
 
 .lightbox .lb-image {
   display: block;
-  /* height: auto; */
-  /* width: 100%; */
-  max-width: 1200px;
-  max-height: 600px;
+  height: auto;
+  width: 100%;
+  /* max-width: 1200px; */
   /* max-height: none; */
   border-radius: 3px;
   /* Image border */
