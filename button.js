@@ -1,34 +1,41 @@
-const menuIcon = document.querySelector('#menu-icon');
-const header = document.querySelector('.header');
-const navbar = document.querySelector('.navbar');
-const hrElements = document.querySelectorAll('.navbar .hr');
+primClick = () => {
+  document.querySelector(".primary-items").classList.toggle("drop");
+};
 
-// Function to deactivate everything
-function deactivateAll() {
-    menuIcon.classList.remove('bx-x');
-    header.classList.remove('active');
-    navbar.classList.remove('active');
-    hrElements.forEach(hr => {
-        hr.classList.remove('active');
-    });
-}
-
-// Toggle active elements when menu icon is clicked
-menuIcon.addEventListener('click', () => {
-    menuIcon.classList.toggle('bx-x');
-    header.classList.toggle('active');
-    navbar.classList.toggle('active');
-    hrElements.forEach(hr => {
-        hr.classList.toggle('active');
-    });
+document.querySelectorAll(".primary-items a").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.stopPropagation(); // Stop the event propagation
+    document.querySelector(".primary-items").classList.remove("drop");
+  });
 });
 
-// Deactivate everything when clicking outside the navbar
-document.addEventListener('click', (event) => {
-    const clickedElement = event.target;
+document.addEventListener("click", (event) => {
+  const primaryItems = document.querySelector(".primary-items");
+  const primaryLi = document.querySelector(".primary-li");
 
-    // Check if the clicked element is not within the navbar
-    if (!navbar.contains(clickedElement) && !menuIcon.contains(clickedElement)) {
-        deactivateAll();
-    }
+  // Check if the clicked element is not inside .primary-li or its descendants
+  if (!primaryLi.contains(event.target) || !dropdownLi.contains(event.target)) {
+    primaryItems.classList.remove("drop");
+  }
+});
+
+moreClick = () => {
+  document.querySelector(".dropdown").classList.toggle("drop");
+};
+
+document.querySelectorAll(".dropdown a").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.stopPropagation(); // Stop the event propagation
+    document.querySelector(".dropdown").classList.remove("drop");
+  });
+});
+
+document.addEventListener("click", (event) => {
+  const dropdown = document.querySelector(".dropdown");
+  const dropdownLi = document.querySelector(".dropdown-li");
+
+  // Check if the clicked element is not inside .dropdown-li or its descendants
+  if (!dropdownLi.contains(event.target)) {
+    dropdown.classList.remove("drop");
+  }
 });
