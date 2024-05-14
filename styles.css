@@ -207,6 +207,15 @@ main {
   grid-column: 1 / 2;
 }
 
+.hero-para {
+  background-color: rgba(32, 32, 32, 0.6);
+  width: auto;
+  height: auto;
+  padding: 10px;
+  margin: 30px 0 30px 0;
+  border-radius: 10px;
+}
+
 /* container */
 .home-vid {
   display: flex;
@@ -261,11 +270,11 @@ iframe {
 }
 /* typing animation */
 
-.home-content p {
+/* .home-content p {
   font-size: 16px;
   margin: 20px 0 40px;
   max-width: 600px;
-}
+} */
 
 .home-content .btn-box {
   display: flex;
